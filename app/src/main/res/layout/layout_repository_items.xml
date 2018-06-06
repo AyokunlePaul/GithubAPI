@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Model"
+            type="com.dev.eipeks.graymergetest.core.api.models.RepositoryModel"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        style="@style/LayoutMatchWidth"
+        android:layout_marginTop="@dimen/standard_cardview_margin"
+        android:layout_marginBottom="@dimen/standard_cardview_margin"
+        app:cardElevation="@dimen/standard_cardview_elevation"
+        app:contentPadding="@dimen/standard_cardview_content_padding">
+
+        <LinearLayout
+            style="@style/LayoutMatchWidth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:roundAsCircle="true"
+                app:roundedCornerRadius="4dp"
+                app:placeholderImage="@drawable/ic_error_outline"
+                app:failureImage="@drawable/ic_error_outline"
+                android:id="@+id/organization_avatar"/>
+
+            <LinearLayout
+                style="@style/LayoutMatchParent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    style="@style/LayoutMatchWidth"
+                    android:padding="@dimen/standard_padding"
+                    tools:text="Retrofit"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold"
+                    android:text="@{Model.name}"
+                    android:ellipsize="end"
+                    android:lines="1"/>
+                <TextView
+                    style="@style/LayoutMatchWidth"
+                    android:padding="@dimen/standard_padding"
+                    tools:text="Retrofit"
+                    android:textSize="@dimen/standard_text_size"
+                    android:text="@{Model.description}"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

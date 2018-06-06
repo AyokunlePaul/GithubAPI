@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        style="@style/LayoutMatchParent">
+        <android.support.v7.widget.RecyclerView
+            style="@style/LayoutMatchWidth"
+            android:id="@+id/repository_list"/>
+    </RelativeLayout>
+</layout>
